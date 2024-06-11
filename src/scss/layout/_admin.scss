@@ -1,0 +1,72 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.citas{
+    list-style: none;
+    padding: 0;
+
+    li{
+        padding: 1rem;
+        border-top: 1px solid v.$blanco;
+        transition: transform;
+        transition-duration: 300ms;
+        
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+    p{
+        font-weight: v.$bold;
+        color: v.$azul;
+        text-transform: uppercase;
+    }
+    span,
+    .servicio{
+        font-weight: v.$regular;
+        color: v.$blanco;
+        text-transform: none;
+    }
+
+
+}
+
+.servicios{
+    @extend .citas;
+
+    .acciones{
+        margin: 0;
+        padding: auto;
+        @include m.tablet{
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .boton{
+                @include m.boton(v.$azul, v.$blanco);
+                margin: 0;
+                display: block;
+                width: 100%;
+                align-items: center;
+                margin-bottom: 2rem;
+                justify-content: center;
+            }
+            .boton-eliminar{
+                @include m.boton(v.$rojo, v.$blanco);
+                margin: 0;
+                display: block;
+                width: 100%;
+                align-items: center;
+                margin-bottom: 2rem;
+                justify-content: center;
+            }
+        }
+    }
+    .boton,
+    .boton-eliminar{
+        margin-bottom: 2rem;
+        width: 50%;
+    }
+    
+
+    
+}
