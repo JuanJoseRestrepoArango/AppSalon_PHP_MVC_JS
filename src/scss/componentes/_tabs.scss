@@ -4,6 +4,7 @@
 .tabs{
     
     @include m.tablet{
+        margin: 0;
         display: flex;
     }
     

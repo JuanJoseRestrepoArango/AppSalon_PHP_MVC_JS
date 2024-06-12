@@ -344,10 +344,6 @@ async function confirmarCita(){
             text: "La cita no se guardo correctamente"
         });
     }
-
-
-    
-
     // console.log([...datos]);
 
 }

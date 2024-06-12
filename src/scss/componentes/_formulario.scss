@@ -10,6 +10,7 @@
     display: flex;
     margin-bottom: 2rem;
     align-items: center;
+    width: auto;
 
     label{
         flex: 0 0 10rem;
@@ -18,7 +19,8 @@
         flex: 1;
         border: none;
         border-radius: 2rem;
-        padding: calc(v.$separacion / 4);
+        padding: calc(v.$separacion / 5);
+        width: 100%;
         
         &:disabled{
             background-color: v.$blanco;
